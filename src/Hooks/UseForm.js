@@ -6,6 +6,11 @@ const validation = {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: 'Preencha um email válido',
   },
+  senha: {
+    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/,
+    message:
+      'Senha deve conter pelo menos 08 digitos, sendo ao menos 01 letra maíuscula, 01 letra minúscula, 01 caractere especial(@$#*&)',
+  },
 };
 
 const UseForm = (type) => {
