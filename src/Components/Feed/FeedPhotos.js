@@ -13,7 +13,6 @@ const FeedPhotos = ({ setModalPhoto }) => {
     async function fetchPhotos() {
       const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
       const { response, json } = await request(url, options);
-      console.log(json);
     }
     fetchPhotos();
   }, [request]);
@@ -24,7 +23,11 @@ const FeedPhotos = ({ setModalPhoto }) => {
     return (
       <ul className={`${styles.feed} animeLeft`}>
         {data.map((photo) => (
-          <FeedPhotoItens photo={photo} key={photo.id} setModalPhoto={setModalPhoto}/>
+          <FeedPhotoItens
+            photo={photo}
+            key={photo.id}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </ul>
     );
