@@ -11,6 +11,11 @@ const validation = {
     message:
       'Senha deve conter pelo menos 08 digitos, sendo ao menos 01 letra maíuscula, 01 letra minúscula, 01 caractere especial(@$#*&)',
   },
+  number: {
+    regex: /^\d+$/,
+    message:
+      'Utilize apenas números.',
+  },
 };
 
 const UseForm = (type) => {

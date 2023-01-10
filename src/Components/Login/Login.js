@@ -8,9 +8,11 @@ import LoginPasswordReset from './LoginPasswordReset';
 import styles from './Login.module.css';
 
 const Login = () => {
-  const { login } = React.useContext(UserContext);
+  const { login, userLogout } = React.useContext(UserContext);
 
   if (login === true) return <Navigate to="/conta" />;
+
+  if (userLogout === true) return <Navigate to="/" />;
 
   return (
     <section className={styles.login}>
