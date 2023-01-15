@@ -84,7 +84,6 @@ export function PHOTO_GET(id) {
   };
 }
 
-
 export function USER_POST(body) {
   return {
     url: API_URL + '/api/user',
@@ -106,6 +105,19 @@ export function PHOTO_DELETE(id) {
       headers: {
         Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
+    },
+  };
+}
+
+export function PASSWORD_LOST(body) {
+  return {
+    url: API_URL + '/api/password/lost',
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
     },
   };
 }
