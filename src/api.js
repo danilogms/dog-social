@@ -84,6 +84,7 @@ export function PHOTO_GET(id) {
   };
 }
 
+
 export function USER_POST(body) {
   return {
     url: API_URL + '/api/user',
