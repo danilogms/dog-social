@@ -14,7 +14,7 @@ const UserHeader = () => {
         setTitle('Poste sua Foto');
         break;
       case '/conta/estatisticas':
-        setTitle('Estatisticas');
+        setTitle('Estatísticas');
         break;
       default:
         setTitle('Minha Conta');
